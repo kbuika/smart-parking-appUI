@@ -6,6 +6,11 @@
   height: 40vmin;
 }
 
+.body {
+  min-height: 100vh;
+
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -19,4 +24,44 @@
 
 .App-link {
   color: #09d3ac;
+}
+
+.cards {
+  margin-top: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 2rem;
+ 
+}
+
+.empty-card {
+  margin-top: 1rem;
+  width: 6rem;
+  height: 10rem;
+  background-color: grey;
+}
+
+.occupied-card {
+  margin-top: 1rem;
+  width: 6rem;
+  height: 10rem;
+  background-color: green;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.sample-empty {
+  width: 5rem;
+  background-color: grey;
+  float: right;
+}
+
+.link {
+  color: white;
 }

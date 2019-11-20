@@ -58,7 +58,7 @@ export default function ButtonAppBar() {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <Typography variant="h6" className={classes.title}>
+          <Typography variant="h6" className={classes.title} href="/parking-spaces">
             Parker
           </Typography>
           <div className={classes.search}>
@@ -72,6 +72,7 @@ export default function ButtonAppBar() {
                 input: classes.inputInput,
               }}
               inputProps={{ 'aria-label': 'search' }}
+              
             />
           </div>
         </Toolbar>
