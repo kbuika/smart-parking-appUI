@@ -28,7 +28,7 @@ class HomePage extends Component {
 
   render() { 
     return ( 
-      <div >
+      <div style={{ backgroundColor: "#e6e6ff"}}>
         <ButtonAppBar/>
         
         <div className="body">
