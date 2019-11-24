@@ -10,21 +10,16 @@ class HomePage extends Component {
     super(props);
     this.state = { 
         response: {},
-        endpoint: "", // server endpoint
-      
+        endpoint: "http://127.0.0.1:4000/", // server endpoint
      }
   }
 
   componentDidMount() {
-
     const { endpoint } = this.state;
     const socket = socketIOClient(endpoint);
-    socket.on("Data", response => this.setState({ response: response}))
-    
+    socket.on("Data", response => this.setState({ response: response}));
+    console.log(this.state.response.slot2);
   }
-
- 
-
 
   render() { 
     return ( 
