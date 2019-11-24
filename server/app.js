@@ -3,7 +3,7 @@ const http = require("http");
 const socketIo = require("socket.io");
 const axios = require("axios");
 
-const port = 4000;
+const port = process.env.PORT || 4000;
 const index = require("./route/index");
 
 const app = express();
@@ -25,7 +25,8 @@ const getApiAndEmit = async socket => {
         const res = await axios.get (
             "https://api.thingspeak.com/channels/911938/feeds.json?api_key=F3IME8BMUUQDMK3T&results=2"
         );
-        socket.emit("Data", res.json({ name: "hello"}));
+        socket.emit("Data", res.data.feeds[1]);
+        console.log(res.data.feeds[1]);
     } catch (error) {
         console.error(`Error: ${error.code}`);
     }
