@@ -23,7 +23,7 @@ io.on('connection', socket => {
 const getApiAndEmit = async socket => {
     try {
         const res = await axios.get (
-            "// endpoint here"
+            "https://api.thingspeak.com/channels/911938/feeds.json?api_key=F3IME8BMUUQDMK3T&results=2"
         );
         socket.emit("Data", res.json({ name: "hello"}));
     } catch (error) {
